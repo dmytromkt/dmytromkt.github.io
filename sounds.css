@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: 'Shadows Into Light', cursive;
+    overflow:hidden;
+    overflow-y:hidden; 
+    height: 100vh;
+    background-image: url(https://wallpaperaccess.com/full/1163465.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+    padding: 20px;
+    }
+
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:  rgb(214, 181, 136);
+}
+ 
+
+    body::after {
+        background: #333333;
+        content: "";
+        height: 130%;
+        left: 0;
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        transition: all .25s ease;
+        width: 100%;
+    }
+
+    .nav {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+           
+    }
+    .list {
+       
+        display: flex;
+        align-items: center;
+    }
+    .logo-img
+    {
+        height: 70px;
+    }
+ 
+    .list li {
+     display: flex;
+     padding: 0 10px;
+    color: rgb(196, 186, 186);
+    font-weight: bold;
+    font-size:  19px;
+    }
+    .list li:last-of-type{
+        padding-right: 0;
+    
+    }
+    .nav-link  {
+        position: relative;
+        transition: all .25s ease;
+    }
+    .nav-link::after{
+        content: "";
+        background:  rgb(214, 181, 136 ) ;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        transform: scaleX(0);
+        transition: all .25s ease;
+    }
+    .nav-link:hover::after{
+        transform: scaleX(1);
+    }
+    
+    .nav-link:hover {
+        color:  rgb(211, 159, 87);
+    }
+
+    .text {
+        font-size: 18px;
+        position: relative;
+        z-index: 2;
+        color:#fffef7;
+    }
+    .audios {
+    position: absolute;
+    z-index: 2;       
+    }
+    .audios2 {
+        margin-top: 100px;
+    position: absolute;
+    z-index: 2;       
+    }
+    .audios3 {
+        margin-top: 200px;
+    position: absolute;
+    z-index: 2;       
+    }
+    .audios4 {
+        margin-top: 300px;
+    position: absolute;
+    z-index: 2;       
+    }
+    

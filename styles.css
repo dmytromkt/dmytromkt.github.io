@@ -1,0 +1,177 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Shadows Into Light', cursive;
+  background-image: url(https://library.wustl.edu/wp-content/uploads/2021/01/sarah-2zHGVCrdxHw-unsplash-scaled.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+body::after{
+  background: #353434;
+      content: "";
+      height: 100%;
+      left: 0;
+      opacity: .5;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      transition: all .25s ease;
+      width: 100%;
+}
+a {
+  text-decoration: none;
+  color:  rgb(214, 181, 136);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+
+.piano {
+  z-index: 1;
+  margin-top: 250px; /* Adjust for header height */
+  display: flex;
+  cursor: pointer;
+}
+
+/* .piano {
+  margin-top: 200px;
+ z-index: 1;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  
+} */
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  --width: 100px;
+  background-color: rgb(226, 226, 226);
+  border: 1px solid #333;
+  border-radius: 0 0 8px 8px ;
+}
+
+.white.active {
+  background-color: #8f8e8e;
+}
+
+.black {
+  margin-bottom: 160px;
+  --width: 60px;
+  background-color: rgb(26, 25, 25);
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+  border-radius: 0 0 8px 8px;
+}
+
+.black.active {
+  background-color: #333;
+}
+
+/* .head {
+  margin-top: 20px;
+}
+
+.design {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  font-weight: 1000;
+  color: rgb(255, 255, 255);
+  font-size: large;
+  text-decoration: none;
+  background-color: rgb(31, 31, 31);
+  border-radius: 6px;
+}
+
+.design:hover {
+color: rgb(228, 198, 154);
+background-color: rgb(0, 0, 0) ;
+transition: all .30s ease;
+} */
+
+/* .nav {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+     
+} */
+.list {
+ position: absolute;
+  display: flex;
+  align-items: center;
+}
+.logo-img
+{
+  height: 70px;
+}
+
+.list li {
+display: flex;
+padding: 0 15px;
+color: rgb(196, 186, 186);
+font-weight: bold;
+font-size:  19px;
+}
+.list li:last-of-type{
+  padding-right: 0;
+
+}
+.nav-link  {
+  position: relative;
+  transition: all .25s ease;
+}
+.nav-link::after{
+  content: "";
+  background:  rgb(214, 181, 136 ) ;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  transform: scaleX(0);
+  transition: all .25s ease;
+}
+.nav-link:hover::after{
+  transform: scaleX(1);
+}
+
+.nav-link:hover {
+  color:  rgb(211, 159, 87);
+}
+.logo {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 20px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.nav ul {
+  margin-top: 90px;
+  margin-right: 40px;
+}
